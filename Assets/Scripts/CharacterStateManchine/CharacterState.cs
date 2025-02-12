@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class State
+public class CharacterState
 {
     /* Public Variables */
     public Character character;
-    public StateMachine stateMachine;
+    public CharacterStateMachine stateMachine;
 
     /* Protected Variables */
-    protected Vector3 gravityVelocity;
+    //protected Vector3 gravityVelocity;
     protected Vector3 velocity;
     protected Vector2 input;
 
@@ -16,9 +16,10 @@ public class State
     public InputAction moveAction;
     public InputAction lookAction;
     public InputAction sprintAction;
+    public InputAction carefulAction;
 
     /* Constructor - Allows for states to be created within a MonoBehaviour class */
-    public State(Character _character, StateMachine _stateMachine)
+    public CharacterState(Character _character, CharacterStateMachine _stateMachine)
     {
         character = _character;
         stateMachine = _stateMachine;
@@ -26,6 +27,7 @@ public class State
         moveAction = character.playerInput.actions["Move"];
         lookAction = character.playerInput.actions["Look"];
         sprintAction = character.playerInput.actions["Sprint"];
+        carefulAction = character.playerInput.actions["Slow"];
     }
 
     /* Call to Enter a State - Handles Setup for new State */
@@ -54,3 +56,4 @@ public class State
     {
     }
 }
+

@@ -1,19 +1,13 @@
-using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 
-public class StandingState : State
+public class StandingState : CharacterState
 {
     /* State Vairables */
-    float gravityValue;
-    Vector3 currentVelocity;
     bool sprint;
-    float playerSpeed;
-    bool grounded;
+    bool careful;
     // bool jump;       //TODO
 
-    Vector3 cVelocity;
-
-    public StandingState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
+    public StandingState(Character _character, CharacterStateMachine _stateMachine) : base(_character, _stateMachine)
     {
         character = _character;
         stateMachine = _stateMachine;
@@ -25,14 +19,12 @@ public class StandingState : State
 
         // jump = false;    //TODO
         sprint = false;
+        careful = false;
         input = Vector2.zero;
         velocity = Vector3.zero;
-        currentVelocity = Vector3.zero;
-        gravityVelocity.y = 0f;
+        //gravityVelocity.y = 0f;
 
-        playerSpeed = character.playerSpeed;
-        grounded = character.controller.isGrounded;
-        gravityValue = character.gravityValue;
+        character.currentSpeed = character.playerSpeed;
     }
 
     public override void HandleInput()
@@ -52,6 +44,10 @@ public class StandingState : State
         {
             sprint = true;
         }
+        else if (carefulAction.IsPressed())
+        {
+            careful = true;
+        }
     }
 
     public override void LogicUpdate()
@@ -66,46 +62,33 @@ public class StandingState : State
         {
             stateMachine.ChangeState(character.sprinting);
         }
+        else if (careful)
+        {
+            stateMachine.ChangeState(character.careful);
+        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
 
-        // Apply Gravity to the Player
-        gravityVelocity.y += gravityValue * Time.deltaTime;
-        grounded = character.controller.isGrounded;
-
-        // If on the ground then don't send the Player through it
-        if (grounded && gravityVelocity.y < 0f)
-        {
-            gravityVelocity.y = 0f;
-        }
-
-        // Apply velocity to the player in the direction determined by Input relative to the camera
-        currentVelocity = Vector3.MoveTowards(currentVelocity, velocity, character.velocityLerp * Time.deltaTime);
-        //Vector3 finalVelocity = character.transform.TransformVector(currentVelocity);
-        character.controller.Move((currentVelocity * Time.deltaTime * playerSpeed) + (gravityVelocity * Time.deltaTime));
-
-        //If the player is not facing the direction they are moving, apply roation to them.
-        if (velocity.sqrMagnitude > 0f)
-        {
-            character.transform.rotation = Quaternion.Slerp(character.transform.rotation, Quaternion.LookRotation(velocity), character.rotationDampTime);
-        }
+        character.MoveCharacter(velocity);
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        //Cancle out velocities being applied to be handled by next State
+        /*
+        // Cancle out velocities being applied to be handled by next State
         gravityVelocity.y = 0f;
-        //character.playerVelocity = new Vector3(input.x, 0, input.y);
+        character.playerVelocity = new Vector3(input.x, 0, input.y);
 
         // If the player is in process of turning then set them to face the direction they were turning towards
         if (velocity.sqrMagnitude > 0f)
         {
             character.transform.rotation = Quaternion.LookRotation(velocity);
         }
+        */
     }
 }
