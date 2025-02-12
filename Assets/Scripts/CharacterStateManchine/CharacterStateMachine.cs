@@ -1,15 +1,15 @@
 
-public class StateMachine
+public class CharacterStateMachine
 {
-    public State currentState;
+    public CharacterState currentState;
 
-    public void Initialize(State startingState)
+    public void Initialize(CharacterState startingState)
     {
         currentState = startingState;
         startingState.Enter();
     }
 
-    public void ChangeState(State newState)
+    public void ChangeState(CharacterState newState)
     {
         currentState.Exit();
 
