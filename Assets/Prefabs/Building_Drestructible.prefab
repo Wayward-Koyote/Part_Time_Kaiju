@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604fae525adb5f543b73ca19d19e3c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakForceThreshold: 1
+  breakForceThreshold: 330
   value: 84326.34
   parts:
   - {fileID: 2432241567343766331}

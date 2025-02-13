@@ -64,4 +64,10 @@ public class LevelController : MonoBehaviour
         //Debug.Log("Total Damage: $" + totalDamage);
         damageTxt.text = string.Format("{0:C}", totalDamage);
     }
+
+    public void UpdateTips(float tip)
+    {
+        totalTips += tip;
+        tipsTxt.text = string.Format("{0:C}",  totalTips);
+    }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - BuildingPart
+  - DeliveryZone
   layers:
   - Default
   - TransparentFX
