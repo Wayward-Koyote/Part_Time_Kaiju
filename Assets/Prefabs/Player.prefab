@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 7610192093760113304}
   - component: {fileID: 3537526213488904688}
   - component: {fileID: 5680085797372120228}
-  - component: {fileID: 2589083766438170904}
+  - component: {fileID: 1988635504076282977}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -583,9 +583,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd1c26c013408945b5dc19d48ae489a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 50
-  sprintSpeed: 75
-  carefulSpeed: 25
+  playerSpeed: 30
+  sprintSpeed: 60
+  carefulSpeed: 15
   roatationSpeed: 2
   gravityMultiplier: 2
   velocityLerp: 1
@@ -621,7 +621,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2589083766438170904
+--- !u!114 &1988635504076282977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -630,10 +630,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2740298740058901888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a397e5c93536f41a612381b258da4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 978a8b6156d72f14ea4e01e2adf89232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 10
+  playerMass: 500
 --- !u!1 &3855419574573282431
 GameObject:
   m_ObjectHideFlags: 0

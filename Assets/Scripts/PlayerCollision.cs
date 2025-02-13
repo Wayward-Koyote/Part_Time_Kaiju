@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    [Header("Level Hookup")]
+    [SerializeField] LevelController levelController;
+
     [Header("Player Momentum Setup")]
     [SerializeField] float playerMass = 300f;
     private Character character;
@@ -22,41 +25,47 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        switch (hit.gameObject.tag)
+        if (hit.gameObject.tag != null)
         {
-            case "Building":
-                Debug.Log("Player Collision with Building");
+            switch (hit.gameObject.tag)
+            {
+                case "Building":
+                    //Debug.Log("Player Collision with Building");
 
-                currentVelocity = character.GetCurrentVelocity().magnitude;
-                pushForce = currentVelocity * playerMass;
+                    if (hit.gameObject.GetComponent<Building>() != null)
+                    {
+                        currentVelocity = character.GetCurrentVelocity().magnitude;
+                        pushForce = currentVelocity * playerMass;
 
-                hit.gameObject.GetComponent<Building>().HandleImpact(pushForce);
+                        hit.gameObject.GetComponent<Building>().HandleImpact(pushForce, levelController);
+                    }
 
-                break;
-            case "BuildingPart":
-                Debug.Log("Player Collision with BuildingPart");
+                    break;
+                case "BuildingPart":
+                    //Debug.Log("Player Collision with BuildingPart");
 
-                Rigidbody rb = hit.collider.attachedRigidbody;
+                    if (hit.collider.attachedRigidbody != null)
+                    {
+                        Rigidbody rb = hit.collider.attachedRigidbody;
 
-                if (rb != null)
-                {
-                    Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
-                    forceDirection.y *= 0.5f;
-                    forceDirection.Normalize();
+                        Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
+                        forceDirection.y *= 0.5f;
+                        forceDirection.Normalize();
 
-                    currentVelocity = character.GetCurrentVelocity().magnitude;
-                    pushForce = currentVelocity * playerMass;
+                        currentVelocity = character.GetCurrentVelocity().magnitude;
+                        pushForce = currentVelocity * playerMass;
 
-                    rb.AddForceAtPosition(forceDirection * pushForce, transform.position, ForceMode.Impulse);
+                        rb.AddForceAtPosition(forceDirection * pushForce, transform.position, ForceMode.Impulse);
 
-                    //Debug.Log("Applied Force: " + pushForce.ToString());
-                }
+                        //Debug.Log("Applied Force: " + pushForce.ToString());
+                    }
 
-                break;
-            default:
-                Debug.Log("Player Collision Unrecognized");
+                    break;
+                default:
+                    //Debug.Log("Player Collision Unrecognized");
 
-                break;
+                    break;
+            }
         }
     }
 }

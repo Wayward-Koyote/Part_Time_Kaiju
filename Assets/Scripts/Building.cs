@@ -21,10 +21,12 @@ public class Building : MonoBehaviour
         
     }
 
-    public void HandleImpact(float _impactForce)
+    public void HandleImpact(float impactForce, LevelController levelController)
     {
-        if (_impactForce >= breakForceThreshold)
+        if (impactForce >= breakForceThreshold)
         {
+            levelController.UpdateDamage(value);
+
             for (int i = 0; i < parts.Length; i++)
             {
                 parts[i].SetActive(true);
