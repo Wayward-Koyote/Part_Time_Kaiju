@@ -102,4 +102,9 @@ public class Character : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_velocity), rotationDampTime);
         }
     }
+
+    public Vector3 GetCurrentVelocity()
+    {
+        return currentVelocity;
+    }
 }
