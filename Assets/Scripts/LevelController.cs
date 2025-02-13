@@ -46,6 +46,11 @@ public class LevelController : MonoBehaviour
                 Debug.Log("End of Shift");
             }
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("Exit Game");
+            Application.Quit();
+        }
     }
 
     private void UpdateTimer(float currentTime)
