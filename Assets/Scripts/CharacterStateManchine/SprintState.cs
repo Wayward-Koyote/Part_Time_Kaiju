@@ -62,13 +62,15 @@ public class SprintState : CharacterState
         {
             stateMachine.ChangeState(character.standing);
         }
+
+        character.MoveCharacter(velocity);
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
 
-        character.MoveCharacter(velocity);
+        
     }
 
     public override void Exit()

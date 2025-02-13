@@ -94,12 +94,17 @@ public class Character : MonoBehaviour
         else
             currentVelocity = Vector3.MoveTowards(currentVelocity, _velocity, velocityLerp * stopMod * Time.deltaTime);
         //Vector3 finalVelocity = character.transform.TransformVector(currentVelocity);
-        controller.Move((currentVelocity * Time.deltaTime * playerSpeed) + (gravityVelocity * Time.deltaTime));
+        controller.Move((currentSpeed * Time.deltaTime * currentVelocity) + (gravityVelocity * Time.deltaTime));
 
         //If the player is not facing the direction they are moving, apply roation to them.
         if (_velocity.sqrMagnitude > 0f)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_velocity), rotationDampTime);
         }
+    }
+
+    public Vector3 GetCurrentVelocity()
+    {
+        return currentVelocity;
     }
 }

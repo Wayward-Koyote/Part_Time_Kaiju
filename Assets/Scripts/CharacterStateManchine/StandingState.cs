@@ -66,13 +66,15 @@ public class StandingState : CharacterState
         {
             stateMachine.ChangeState(character.careful);
         }
+
+        character.MoveCharacter(velocity);
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
 
-        character.MoveCharacter(velocity);
+        
     }
 
     public override void Exit()
