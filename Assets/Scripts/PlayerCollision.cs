@@ -41,6 +41,7 @@ public class PlayerCollision : MonoBehaviour
                     }
 
                     break;
+
                 case "BuildingPart":
                     //Debug.Log("Player Collision with BuildingPart");
 
@@ -61,6 +62,16 @@ public class PlayerCollision : MonoBehaviour
                     }
 
                     break;
+
+                case "DeliveryZone":
+                    Debug.Log("Player Collision with DeliveryZone");
+                    if (hit.gameObject.GetComponent<DeliveryNode>() != null)
+                    {
+                        hit.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
+                    }
+
+                    break;
+
                 default:
                     //Debug.Log("Player Collision Unrecognized");
 
