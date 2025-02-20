@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c830c239a6c1ba740b302915def6105f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 10
+  levelTime: 300
   timerTxt: {fileID: 1356354654}
   damageTxt: {fileID: 1625992790}
   tipsTxt: {fileID: 1685039711}
@@ -7711,8 +7711,8 @@ MonoBehaviour:
   levelController: {fileID: 0}
   maxOrders: 5
   firstOrderDelay: 2
-  timeBetweenOrdersMin: 6
-  timeBetweenOrdersMax: 12
+  timeBetweenOrdersMin: 4
+  timeBetweenOrdersMax: 8
   timeToCompleteOrders: 30
   baseTips: 20
   nodes:
