@@ -8,6 +8,7 @@ public class DeliveryManager : MonoBehaviour
 
     [Header("Order Variables")]
     [SerializeField] int maxOrders = 5;
+    [SerializeField] float firstOrderDelay = 2f;
     [SerializeField] float timeBetweenOrdersMin = 4f;
     [SerializeField] float timeBetweenOrdersMax = 8f;
     [SerializeField] float timeToCompleteOrders = 30f;
@@ -33,7 +34,7 @@ public class DeliveryManager : MonoBehaviour
 
         activeOrders = 0;
 
-        timeLeft = Random.Range(timeBetweenOrdersMin, timeBetweenOrdersMax);
+        timeLeft = firstOrderDelay;
         timerActive = true;
 
         Debug.Log("Time Until First Order: " + timeLeft.ToString());
