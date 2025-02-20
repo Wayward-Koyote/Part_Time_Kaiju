@@ -40,6 +40,8 @@ public class LevelController : MonoBehaviour
         timerActive = true;
 
         GameManager.Instance.UpdateGameState(GameState.PlayLevel);
+        AudioManager.Instance.StopMenuBGM();
+        AudioManager.Instance.StartLevelBGM();
     }
 
     // Update is called once per frame
@@ -101,6 +103,9 @@ public class LevelController : MonoBehaviour
         shiftEndScreen.SetActive(true);
 
         player.enabled = false;
+
+        AudioManager.Instance.StopLevelBGM();
+        AudioManager.Instance.StartMenuBGM();
     }
 
     public void PauseGame()
@@ -109,6 +114,8 @@ public class LevelController : MonoBehaviour
         pauseMenu.gameObject.SetActive(true);
 
         player.enabled = false;
+
+        AudioManager.Instance.PauseLevelBGM();
     }
 
     public void ResumeGame()
@@ -117,6 +124,8 @@ public class LevelController : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
 
         player.enabled = true;
+
+        AudioManager.Instance.ResumeLevelBGM();
     }
 
     public void QuitToMainMenu()
