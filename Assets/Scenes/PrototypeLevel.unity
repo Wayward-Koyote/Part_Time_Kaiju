@@ -7877,6 +7877,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3873373267800293081, guid: 075d479c37e8ff44a97f7a3d48c7015c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6386281334644073447, guid: 075d479c37e8ff44a97f7a3d48c7015c, type: 3}
       propertyPath: m_TagString
       value: DeliveryZone
@@ -27313,6 +27317,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1066620733}
     m_Modifications:
+    - target: {fileID: 26128801061170373, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 26128801061170373, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 122580990004503421, guid: 769bc2c73f620904190516dc227b408e, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
@@ -27414,6 +27426,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: stopMod
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
       propertyPath: playerSpeed
       value: 50
       objectReference: {fileID: 0}
@@ -27426,8 +27442,32 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: tripDuration
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
       propertyPath: velocityLerp
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: tripDecayRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: tripForceMult
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: tripAccrueRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537526213488904688, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: tripStartingBuffer
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411203700214102914, guid: 769bc2c73f620904190516dc227b408e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7610192093760113304, guid: 769bc2c73f620904190516dc227b408e, type: 3}
       propertyPath: m_Height

@@ -87,6 +87,8 @@ public class CarefulState : CharacterState
     {
         base.Exit();
 
+        character.trip = false; //Cannot trip in Careful State so remove flag
+
         /*
         //Cancle out velocities being applied to be handled by next State
         gravityVelocity.y = 0f;

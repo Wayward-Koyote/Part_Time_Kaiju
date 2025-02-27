@@ -4,6 +4,7 @@ public class SprintState : CharacterState
 {
     /* State Vairables */
     bool sprint;
+    bool trip;
     // bool jump;       //TODO
 
     public SprintState(Character _character, CharacterStateMachine _stateMachine) : base(_character, _stateMachine)
@@ -18,6 +19,7 @@ public class SprintState : CharacterState
 
         // jump = false;    //TODO
         sprint = false;
+        trip = false;
         input = Vector2.zero;
         velocity = Vector3.zero;
         //gravityVelocity.y = 0f;
@@ -37,8 +39,12 @@ public class SprintState : CharacterState
         velocity = (velocity.x * character.cameraTransform.right.normalized) + (velocity.z * character.cameraTransform.forward.normalized);
         velocity.y = 0f;
 
-        //Check If Sprint Key is Released OR If there is no movement Input
-        if (sprintAction.IsPressed() && input.sqrMagnitude != 0f)
+        // Check for State Change Triggers
+        if (character.trip)
+        {
+            trip = true;
+        }
+        else if (sprintAction.IsPressed() && input.sqrMagnitude != 0f)
         {
             sprint = true;
         }
@@ -52,8 +58,12 @@ public class SprintState : CharacterState
     {
         base.LogicUpdate();
 
-        // If still sprinting then apply Sprint Logic, Else change back to Standing State
-        if (sprint)
+        // If Trigger for switching States occured during HandleInput() then switch to new State
+        if (trip)
+        {
+            stateMachine.ChangeState(character.tripped);
+        }
+        else if (sprint) //If still sprinting
         {
             // Update movement animation based off of a flat speed increase
             character.animator.SetFloat("speed", input.magnitude + 0.5f, character.speedDampTime, Time.deltaTime);

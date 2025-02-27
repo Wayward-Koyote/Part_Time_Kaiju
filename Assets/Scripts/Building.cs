@@ -4,7 +4,8 @@ public class Building : MonoBehaviour
 {
     [Header("Prefab Variables")]
     [SerializeField] float breakForceThreshold = 1f;
-    [SerializeField] float value = 1000f;
+    [SerializeField] float propertyCost = 1000f;
+    [SerializeField] float tripChance = 20f;
 
     [Header("Broken Parts")]
     [SerializeField] GameObject[] parts;
@@ -21,11 +22,11 @@ public class Building : MonoBehaviour
         
     }
 
-    public void HandleImpact(float impactForce, LevelController levelController)
+    public float HandleImpact(float impactForce, LevelController levelController)
     {
         if (impactForce >= breakForceThreshold)
         {
-            levelController.UpdateDamage(value);
+            levelController.UpdateDamage(propertyCost);
 
             for (int i = 0; i < parts.Length; i++)
             {
@@ -33,6 +34,17 @@ public class Building : MonoBehaviour
             }
 
             this.gameObject.SetActive(false);
+
+            return tripChance;
         }
+        else
+        {
+            return 0f;
+        }
+    }
+
+    public float GetTripChance()
+    {
+        return tripChance;
     }
 }

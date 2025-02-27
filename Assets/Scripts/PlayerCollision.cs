@@ -23,8 +23,68 @@ public class PlayerCollision : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision with Player Occured");
+        if (collision.gameObject.tag != null)
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "Building":
+                    //Debug.Log("Player Collision with Building");
+
+                    if (collision.gameObject.GetComponent<Building>() != null)
+                    {
+                        currentVelocity = character.GetCurrentVelocity().magnitude;
+                        pushForce = currentVelocity * playerMass;
+
+                        collision.gameObject.GetComponent<Building>().HandleImpact(pushForce, levelController);
+                    }
+
+                    break;
+
+                case "BuildingPart":
+                    //Debug.Log("Player Collision with BuildingPart");
+
+                    if (collision.collider.attachedRigidbody != null)
+                    {
+                        Rigidbody rb = collision.collider.attachedRigidbody;
+
+                        Vector3 forceDirection = collision.gameObject.transform.position - transform.position;
+                        forceDirection.y *= 0.5f;
+                        forceDirection.Normalize();
+
+                        currentVelocity = character.GetCurrentVelocity().magnitude;
+                        pushForce = currentVelocity * playerMass;
+
+                        rb.AddForceAtPosition(forceDirection * pushForce, transform.position, ForceMode.Impulse);
+
+                        //Debug.Log("Applied Force: " + pushForce.ToString());
+                    }
+
+                    break;
+
+                case "DeliveryZone":
+                    //Debug.Log("Player Collision with DeliveryZone");
+                    if (collision.gameObject.GetComponent<DeliveryNode>() != null)
+                    {
+                        collision.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
+                    }
+
+                    break;
+
+                default:
+                    //Debug.Log("Player Collision Unrecognized");
+
+                    break;
+            }
+        }
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        //Debug.Log("Collision with Player Occured");
+
         if (hit.gameObject.tag != null)
         {
             switch (hit.gameObject.tag)
@@ -37,7 +97,7 @@ public class PlayerCollision : MonoBehaviour
                         currentVelocity = character.GetCurrentVelocity().magnitude;
                         pushForce = currentVelocity * playerMass;
 
-                        hit.gameObject.GetComponent<Building>().HandleImpact(pushForce, levelController);
+                        character.TripChance(hit.gameObject.GetComponent<Building>().HandleImpact(pushForce, levelController));
                     }
 
                     break;
@@ -64,7 +124,7 @@ public class PlayerCollision : MonoBehaviour
                     break;
 
                 case "DeliveryZone":
-                    Debug.Log("Player Collision with DeliveryZone");
+                    //Debug.Log("Player Collision with DeliveryZone");
                     if (hit.gameObject.GetComponent<DeliveryNode>() != null)
                     {
                         hit.gameObject.GetComponent<DeliveryNode>().OrderDelivered();

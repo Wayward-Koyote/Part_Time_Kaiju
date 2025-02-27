@@ -286,7 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakForceThreshold: 300
-  value: 99452.13
+  propertyCost: 1000
+  tripChance: 25
   parts:
   - {fileID: 2432241567343766331}
   - {fileID: 4644449159347058837}
