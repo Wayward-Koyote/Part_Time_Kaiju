@@ -5,6 +5,7 @@ public class StandingState : CharacterState
     /* State Vairables */
     bool sprint;
     bool careful;
+    bool trip;
     // bool jump;       //TODO
 
     public StandingState(Character _character, CharacterStateMachine _stateMachine) : base(_character, _stateMachine)
@@ -20,6 +21,7 @@ public class StandingState : CharacterState
         // jump = false;    //TODO
         sprint = false;
         careful = false;
+        trip = false;
         input = Vector2.zero;
         velocity = Vector3.zero;
         //gravityVelocity.y = 0f;
@@ -39,8 +41,12 @@ public class StandingState : CharacterState
         velocity = (velocity.x * character.cameraTransform.right.normalized) + (velocity.z * character.cameraTransform.forward.normalized);
         velocity.y = 0f;
 
-        // Check If Sprint Key is pressed AND that there is movement Input
-        if (sprintAction.IsPressed() && input.sqrMagnitude != 0f)
+        // Check for State Change Triggers
+        if (character.trip)
+        {
+            trip = true;
+        }
+        else if (sprintAction.IsPressed() && input.sqrMagnitude != 0f)
         {
             sprint = true;
         }
@@ -57,8 +63,12 @@ public class StandingState : CharacterState
         // Update movement animation
         character.animator.SetFloat("speed", input.magnitude, character.speedDampTime, Time.deltaTime);
 
-        // If Input for switching States occured during HandleInput() then switch to new State
-        if (sprint)
+        // If Trigger for switching States occured during HandleInput() then switch to new State
+        if (trip)
+        {
+            stateMachine.ChangeState(character.tripped);
+        }
+        else if (sprint)
         {
             stateMachine.ChangeState(character.sprinting);
         }
