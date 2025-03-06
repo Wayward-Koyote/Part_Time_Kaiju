@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2371619638718683642}
   - component: {fileID: 6038333310787465640}
   m_Layer: 0
-  m_Name: DeliverySpot
+  m_Name: DeliveryNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
