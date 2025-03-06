@@ -4,7 +4,7 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     [Header("Level Hookup")]
-    [SerializeField] LevelController levelController;
+    [SerializeField] OrderInventory orderInventory;
 
     [Header("Order Variables")]
     [SerializeField] int maxOrders = 5;
