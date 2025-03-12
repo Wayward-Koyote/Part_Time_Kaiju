@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class OrderInventory : MonoBehaviour
 {
@@ -8,64 +9,85 @@ public class OrderInventory : MonoBehaviour
     DeliveryManager deliveryManager;
 
     [Header("Timer Hookup")]
-    [SerializeField] TMP_Text timerTxt;
+    [SerializeField] Slider[] timerBars;
+
+    [Header("Order PickUp Zone")]
+    [SerializeField] GameObject pickUpZone;
 
     /* Private Variables */
-    private float deliveryTime;
-    private float timeLeft;
-    private bool timerActive = false;
-    private float baseTip = 20f;
-    private bool orderPlaced = false;
+
+    /* Inventory */
+    private Order[] orders;
+    private int orderInventorySize = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
         deliveryManager = GameObject.Find("DeliveryManager").GetComponent<DeliveryManager>();
+
+        /* Assign timer sliders to each Inventory Slot */
+        orders = new Order[orderInventorySize];
+        for (int i = 0; i < orders.Length; i++)
+        {
+            orders[i] = new Order(0, 0, timerBars[i], timerBars[i].GetComponentInChildren<TMP_Text>(true), null, 20, true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timerActive)
+        for (int i = 0; i < orders.Length; i++)
         {
-            if (timeLeft > 0)
+            if (orders[i].active)
             {
-                timeLeft -= Time.deltaTime;
-                UpdateTimer(timeLeft);
-            }
-            else
-            {
-                //Update deliveryManager
-                deliveryManager.RemoveOrder();
+                if (orders[i].timeLeft > 0)
+                {
+                    orders[i].timeLeft -= Time.deltaTime;
+                    orders[i].UpdateTimer(orders[i].timeLeft);
+                }
+                else
+                {
+                    //Update deliveryManager
+                    deliveryManager.RemoveOrder();
 
-                timeLeft = 0;
-                timerActive = false;
+                    orders[i].timeLeft = 0;
+                    orders[i].active = false;
 
-                Debug.Log("Order Cancelled");
+                    Debug.Log("Order Cancelled");
+                }
             }
         }
     }
 
-    private void UpdateTimer(float currentTime)
+    public void OrderPlaced(float _deliveryTime, float _baseTip, DeliveryNode _deliveryLocation, bool _pickedUp)
     {
-        currentTime += 1;
+        for (int i = 0; i < orders.Length; i++)
+        {
+            if (!orders[i].active)
+            {
+                orders[i].active = true;
+                orders[i].deliveryTime = _deliveryTime;
+                orders[i].timeLeft = _deliveryTime;
+                orders[i].deliveryLocation = _deliveryLocation;
+                orders[i].pickedUp = _pickedUp;
 
-        //float minutes = Mathf.FloorToInt(currentTime / 60);
-        //float seconds = Mathf.FloorToInt(currentTime % 60);
-
-        //timerTxt.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-
-        timerTxt.text = string.Format("{0:00}s Left", currentTime);
+                if (!orders[i].pickedUp)
+                    pickUpZone.SetActive(true);
+            }
+        }
     }
 
-    public void OrderPlaced(float _deliveryTime, float _baseTip)
+    public void PickUpOrders()
     {
-        baseTip = _baseTip;
-        orderPlaced = true;
-        deliveryTime = _deliveryTime;
-        timeLeft = deliveryTime;
-        timerActive = true;
+        for(int i = 0; i < orders.Length; i++)
+        {
+            if (orders[i].active)
+            {
+                orders[i].pickedUp = true;
+                orders[i].UpdateTimer(orders[i].timeLeft);
+            }
+        }
     }
 
     public void OrderDelivered()
@@ -86,5 +108,56 @@ public class OrderInventory : MonoBehaviour
     public bool HasAlreadyOrdered()
     {
         return orderPlaced;
+    }
+
+    /* Order Struct */
+
+    struct Order
+    {
+        public bool active;
+
+        public float deliveryTime;
+        public float timeLeft;
+
+        public Slider timerBar;
+        public TMP_Text timerText;
+
+        public DeliveryNode deliveryLocation;
+
+        public float baseTip;
+
+        public bool pickedUp;
+
+        public Order(float _deliveryTime, float _timeLeft, Slider _timerBar, TMP_Text _timerText, DeliveryNode _deliveryLocation, float _baseTip, bool _pickedUp)
+        {
+            active = false;
+
+            deliveryTime = _deliveryTime;
+            timeLeft = _deliveryTime;
+
+            timerBar = _timerBar;
+            timerText = _timerText;
+
+            deliveryLocation = _deliveryLocation;
+
+            baseTip = _baseTip;
+
+            pickedUp = _pickedUp;
+        }
+
+        public void UpdateTimer(float currentTime)
+        {
+            currentTime += 1;
+
+            //float minutes = Mathf.FloorToInt(currentTime / 60);
+            //float seconds = Mathf.FloorToInt(currentTime % 60);
+
+            //timerTxt.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+            if (pickedUp)
+                timerText.text = "Deliver: " + string.Format("{0:00}s Left", currentTime);
+            else
+                timerText.text = "Pick Up: " + string.Format("{0:00}s Left", currentTime);
+        }
     }
 }

@@ -71,6 +71,11 @@ public class DeliveryNode : MonoBehaviour
         timerActive = true;
     }
 
+    public void OrderPickedUp()
+    {
+        head.SetActive(true);
+    }
+
     public void OrderDelivered()
     {
         float earnedTip = (timeLeft / deliveryTime) * baseTip;
@@ -85,6 +90,11 @@ public class DeliveryNode : MonoBehaviour
         head.SetActive(false);
 
         Debug.Log("Order Delivered");
+    }
+
+    public void OrderExpired()
+    {
+
     }
 
     public bool HasAlreadyOrdered()
