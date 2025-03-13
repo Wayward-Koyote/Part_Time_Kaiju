@@ -51,8 +51,7 @@ public class OrderInventory : MonoBehaviour
                     //Update deliveryManager
                     deliveryManager.RemoveOrder();
 
-                    orders[i].timeLeft = 0;
-                    orders[i].active = false;
+                    orders[i].OrderExpired();
 
                     Debug.Log("Order Cancelled");
                 }
@@ -72,8 +71,19 @@ public class OrderInventory : MonoBehaviour
                 orders[i].deliveryLocation = _deliveryLocation;
                 orders[i].pickedUp = _pickedUp;
 
+                orders[i].deliveryLocation.OrderPlaced();
+
+                /* Timer Bar Setup */
+                orders[i].timerBar.gameObject.SetActive(true);
+                orders[i].timerBar.maxValue = orders[i].deliveryTime;
+                orders[i].timerBar.value = orders[i].timeLeft;
+
                 if (!orders[i].pickedUp)
                     pickUpZone.SetActive(true);
+                else
+                    orders[i].deliveryLocation.OrderPickedUp(orders[i].timeLeft);
+
+                break;
             }
         }
     }
@@ -90,24 +100,28 @@ public class OrderInventory : MonoBehaviour
         }
     }
 
-    public void OrderDelivered()
+    public void OrderDelivered(DeliveryNode _deliveryLocation)
     {
-        float earnedTip = (timeLeft / deliveryTime) * baseTip;
-        levelController.UpdateTips(earnedTip);
+        for (int i = 0; i < orders.Length; i++)
+        {
+            if (orders[i].deliveryLocation == _deliveryLocation)
+            {
+                float earnedTip = (orders[i].timeLeft / orders[i].deliveryTime) * orders[i].baseTip;
+                levelController.UpdateTips(earnedTip);
 
-        // Update deliveryManager
-        deliveryManager.RemoveOrder();
-        orderPlaced = false;
+                orders[i].deliveryLocation.OrderDelivered();
 
-        timeLeft = 0;
-        timerActive = false;
+                deliveryManager.RemoveOrder();
+
+                orders[i].timerBar.gameObject.SetActive(false);
+
+                orders[i].active = false;
+
+                break;
+            }
+        }
 
         Debug.Log("Order Delivered");
-    }
-
-    public bool HasAlreadyOrdered()
-    {
-        return orderPlaced;
     }
 
     /* Order Struct */
@@ -147,7 +161,9 @@ public class OrderInventory : MonoBehaviour
 
         public void UpdateTimer(float currentTime)
         {
-            currentTime += 1;
+            // currentTime += 1;
+
+            timerBar.value = currentTime;
 
             //float minutes = Mathf.FloorToInt(currentTime / 60);
             //float seconds = Mathf.FloorToInt(currentTime % 60);
@@ -158,6 +174,17 @@ public class OrderInventory : MonoBehaviour
                 timerText.text = "Deliver: " + string.Format("{0:00}s Left", currentTime);
             else
                 timerText.text = "Pick Up: " + string.Format("{0:00}s Left", currentTime);
+        }
+
+        public void OrderExpired()
+        {
+            deliveryLocation.OrderExpired();
+
+            timeLeft = 0;
+
+            timerBar.gameObject.SetActive(false);
+
+            active = false;
         }
     }
 }

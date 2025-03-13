@@ -4,6 +4,7 @@ public class PlayerCollision : MonoBehaviour
 {
     [Header("Level Hookup")]
     [SerializeField] LevelController levelController;
+    [SerializeField] OrderInventory orderInventory;
 
     [Header("Player Momentum Setup")]
     [SerializeField] float playerMass = 300f;
@@ -68,7 +69,8 @@ public class PlayerCollision : MonoBehaviour
                     //Debug.Log("Player Collision with DeliveryZone");
                     if (collision.gameObject.GetComponent<DeliveryNode>() != null)
                     {
-                        collision.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
+                        orderInventory.OrderDelivered(collision.gameObject.GetComponent<DeliveryNode>());
+                        // Debug.Log("Delivery Complete @ " + collision.gameObject.name);
                     }
 
                     break;
@@ -127,7 +129,7 @@ public class PlayerCollision : MonoBehaviour
                     //Debug.Log("Player Collision with DeliveryZone");
                     if (hit.gameObject.GetComponent<DeliveryNode>() != null)
                     {
-                        hit.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
+                        orderInventory.OrderDelivered(hit.gameObject.GetComponent<DeliveryNode>());
                     }
 
                     break;

@@ -12,10 +12,10 @@ public class DeliveryNode : MonoBehaviour
     [SerializeField] GameObject head;
 
     /* Private Variables */
-    private float deliveryTime;
+    // private float deliveryTime;
     private float timeLeft;
     private bool timerActive = false;
-    private float baseTip = 20f;
+    // private float baseTip = 20f;
     private bool orderPlaced = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,21 +37,14 @@ public class DeliveryNode : MonoBehaviour
             }
             else
             {
-                //Update deliveryManager
-                deliveryManager.RemoveOrder();
-
-                timeLeft = 0;
-                timerActive = false;
-                head.SetActive(false);
-
-                Debug.Log("Order Cancelled");
+                // Debug.Log("Order Cancelled");
             }
         }
     }
 
     private void UpdateTimer(float currentTime)
     {
-        currentTime += 1;
+        //currentTime += 1;
 
         //float minutes = Mathf.FloorToInt(currentTime / 60);
         //float seconds = Mathf.FloorToInt(currentTime % 60);
@@ -61,28 +54,22 @@ public class DeliveryNode : MonoBehaviour
         timerTxt.text = string.Format("{0:00}s Left", currentTime);
     }
 
-    public void OrderPlaced(float _deliveryTime, float _baseTip)
+    //Deprecated
+    public void OrderPlaced()
     {
-        head.SetActive(true);
-        baseTip = _baseTip;
         orderPlaced = true;
-        deliveryTime = _deliveryTime;
-        timeLeft = deliveryTime;
-        timerActive = true;
     }
 
-    public void OrderPickedUp()
+    public void OrderPickedUp(float _timeLeft)
     {
         head.SetActive(true);
+
+        timeLeft = _timeLeft;
+        timerActive = true;
     }
 
     public void OrderDelivered()
     {
-        float earnedTip = (timeLeft / deliveryTime) * baseTip;
-        levelController.UpdateTips(earnedTip);
-
-        // Update deliveryManager
-        deliveryManager.RemoveOrder();
         orderPlaced = false;
 
         timeLeft = 0;
@@ -94,7 +81,11 @@ public class DeliveryNode : MonoBehaviour
 
     public void OrderExpired()
     {
+        orderPlaced = false;
 
+        timeLeft = 0;
+        timerActive = false;
+        head.SetActive(false);
     }
 
     public bool HasAlreadyOrdered()
