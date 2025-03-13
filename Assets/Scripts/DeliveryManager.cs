@@ -4,13 +4,13 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     [Header("Level Hookup")]
-    [SerializeField] LevelController levelController;
+    [SerializeField] OrderInventory orderInventory;
 
     [Header("Order Variables")]
     [SerializeField] int maxOrders = 5;
     [SerializeField] float firstOrderDelay = 2f;
-    [SerializeField] float timeBetweenOrdersMin = 4f;
-    [SerializeField] float timeBetweenOrdersMax = 8f;
+    [SerializeField] float timeBetweenOrdersMin = 10f;
+    [SerializeField] float timeBetweenOrdersMax = 15f;
     [SerializeField] float timeToCompleteOrders = 30f;
     [SerializeField] float baseTips = 20f;
 
@@ -70,14 +70,15 @@ public class DeliveryManager : MonoBehaviour
         int index;
         while (counter < maxOrders)
         {
-            Debug.Log("Attempt to Order");
+            // Debug.Log("Attempt to Order");
             index = Random.Range(0, deliveryNodes.Length - 1);
 
             if (!deliveryNodes[index].HasAlreadyOrdered())
             {
-                Debug.Log("Order Up");
+                // Debug.Log("Order Up");
 
-                deliveryNodes[index].OrderPlaced(timeToCompleteOrders, baseTips);
+                orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], false);                
+
                 activeOrders++;
                 counter = maxOrders;
             }

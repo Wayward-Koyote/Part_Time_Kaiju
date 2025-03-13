@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2371619638718683642}
   - component: {fileID: 6038333310787465640}
   m_Layer: 0
-  m_Name: DeliverySpot
+  m_Name: PickUpNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,6 @@ GameObject:
   - component: {fileID: 5535584397010644744}
   - component: {fileID: 2147560159429795486}
   - component: {fileID: 7696976717711130166}
-  - component: {fileID: 74562695489083950}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: DeliveryZone
@@ -797,20 +796,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &74562695489083950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6386281334644073447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 571f8f4325753b34e84f983926d6b229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerTxt: {fileID: 172151839606620308}
-  head: {fileID: 2713462027147947487}
 --- !u!1 &6965518110689926105
 GameObject:
   m_ObjectHideFlags: 0
