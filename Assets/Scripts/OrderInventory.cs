@@ -90,12 +90,16 @@ public class OrderInventory : MonoBehaviour
 
     public void PickUpOrders()
     {
+        pickUpZone.SetActive(false);
+
         for(int i = 0; i < orders.Length; i++)
         {
             if (orders[i].active)
             {
                 orders[i].pickedUp = true;
                 orders[i].UpdateTimer(orders[i].timeLeft);
+
+                orders[i].deliveryLocation.OrderPickedUp(orders[i].timeLeft);
             }
         }
     }

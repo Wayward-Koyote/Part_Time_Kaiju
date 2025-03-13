@@ -65,15 +65,16 @@ public class PlayerCollision : MonoBehaviour
 
                     break;
 
+                /* Deprecated
                 case "DeliveryZone":
                     //Debug.Log("Player Collision with DeliveryZone");
                     if (collision.gameObject.GetComponent<DeliveryNode>() != null)
                     {
-                        orderInventory.OrderDelivered(collision.gameObject.GetComponent<DeliveryNode>());
+                        collision.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
                         // Debug.Log("Delivery Complete @ " + collision.gameObject.name);
                     }
 
-                    break;
+                    break; */
 
                 default:
                     //Debug.Log("Player Collision Unrecognized");
@@ -125,14 +126,15 @@ public class PlayerCollision : MonoBehaviour
 
                     break;
 
+                /* Deprecated
                 case "DeliveryZone":
                     //Debug.Log("Player Collision with DeliveryZone");
                     if (hit.gameObject.GetComponent<DeliveryNode>() != null)
                     {
-                        orderInventory.OrderDelivered(hit.gameObject.GetComponent<DeliveryNode>());
+                        hit.gameObject.GetComponent<DeliveryNode>().OrderDelivered();
                     }
 
-                    break;
+                    break; */
 
                 default:
                     //Debug.Log("Player Collision Unrecognized");

@@ -131,6 +131,9 @@ public class LevelController : MonoBehaviour
     public void QuitToMainMenu()
     {
         Debug.Log("Quit To MainMenu");
+
+        AudioManager.Instance.StopLevelBGM();
+
         SceneManager.LoadScene("MainMenu");
     }
 

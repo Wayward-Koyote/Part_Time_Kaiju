@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 2147560159429795486}
   - component: {fileID: 7696976717711130166}
   - component: {fileID: 74562695489083950}
+  - component: {fileID: 6966249326259002426}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: DeliveryZone
@@ -802,7 +803,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -824,6 +825,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerTxt: {fileID: 172151839606620308}
   head: {fileID: 2713462027147947487}
+--- !u!114 &6966249326259002426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386281334644073447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae439a7afc59b8408cb057734ca0013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6965518110689926105
 GameObject:
   m_ObjectHideFlags: 0

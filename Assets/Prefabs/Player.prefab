@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 5411203700214102914}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591,15 +591,22 @@ MonoBehaviour:
   gravityMultiplier: 2
   velocityLerp: 1
   stopMod: 2
+  tripDuration: 2.5
+  tripDecayRate: 5
+  tripAccrueRate: 1
+  tripStartingBuffer: 0
   speedDampTime: 0.1
   rotationDampTime: 0.2
   gravityValue: -9.81
   controller: {fileID: 0}
+  rb: {fileID: 0}
   playerInput: {fileID: 0}
   cameraTransform: {fileID: 0}
   animator: {fileID: 0}
   playerVelocity: {x: 0, y: 0, z: 0}
   currentSpeed: 0
+  tripChance: 0
+  trip: 0
 --- !u!95 &5680085797372120228
 Animator:
   serializedVersion: 7
@@ -635,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelController: {fileID: 0}
+  orderInventory: {fileID: 0}
   playerMass: 500
 --- !u!54 &5411203700214102914
 Rigidbody:

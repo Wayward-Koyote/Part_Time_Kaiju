@@ -77,7 +77,7 @@ public class DeliveryManager : MonoBehaviour
             {
                 // Debug.Log("Order Up");
 
-                orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], true);                
+                orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], false);                
 
                 activeOrders++;
                 counter = maxOrders;

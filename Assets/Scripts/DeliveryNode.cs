@@ -4,8 +4,8 @@ using TMPro;
 public class DeliveryNode : MonoBehaviour
 {
     /* Managers */
-    LevelController levelController;
-    DeliveryManager deliveryManager;
+    // LevelController levelController;
+    // DeliveryManager deliveryManager;
 
     [Header("Timer Hookup")]
     [SerializeField] TMP_Text timerTxt;
@@ -21,8 +21,8 @@ public class DeliveryNode : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
-        deliveryManager = GameObject.Find("DeliveryManager").GetComponent<DeliveryManager>();
+        // levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
+        // deliveryManager = GameObject.Find("DeliveryManager").GetComponent<DeliveryManager>();
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class DeliveryNode : MonoBehaviour
 
         //timerTxt.text = string.Format("{0:0}:{1:00}", minutes, seconds);
 
-        timerTxt.text = string.Format("{0:00}s Left", currentTime);
+        timerTxt.text = string.Format(" Deliver: {0:00}s", currentTime);
     }
 
     //Deprecated
