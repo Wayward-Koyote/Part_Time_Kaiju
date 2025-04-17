@@ -35,13 +35,10 @@ public class LevelController : MonoBehaviour
 
         totalDamage = 0;
         totalTips = 0;
-
         timeLeft = levelTime;
-        timerActive = true;
 
-        GameManager.Instance.UpdateGameState(GameState.PlayLevel);
-        AudioManager.Instance.StopMenuBGM();
-        AudioManager.Instance.StartLevelBGM();
+        GameManager.Instance.UpdateGameState(GameState.DialogueScene);
+        //StartShift();
     }
 
     // Update is called once per frame
@@ -93,6 +90,14 @@ public class LevelController : MonoBehaviour
         tipsTxt.text = string.Format("{0:C}",  totalTips);
     }
 
+    private void StartShift()
+    {
+        timerActive = true;
+
+        AudioManager.Instance.StopMenuBGM();
+        AudioManager.Instance.StartLevelBGM();
+    }
+
     private void EndShift()
     {
         GameManager.Instance.UpdateGameState(GameState.EndShift);
@@ -141,5 +146,17 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Exit Game");
         Application.Quit();
+    }
+
+    public void EndDialogueScene()
+    {
+        if(timeLeft > 0)
+        {
+            StartShift();
+        }
+        else
+        {
+            EndShift();
+        }
     }
 }
