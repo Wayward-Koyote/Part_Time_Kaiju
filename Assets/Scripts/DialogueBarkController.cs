@@ -2,20 +2,36 @@ using UnityEngine;
 
 public class DialogueBarkController : MonoBehaviour
 {
-    [SerializeField] DialogueUpdater _updater;
+    [SerializeField] DialogueUpdater updater;
+    [SerializeField] float advanceTime = 2.5f;
 
     private float timeLeft;
     private bool barkActive;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (barkActive)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+            }
+            else
+            {
+                timeLeft = 0;
+                barkActive = false;
+
+                updater.DisableDialogue();
+            }
+        }
+    }
+    
+    public void OrderBark()
+    {
+        updater.SelectBark();
+        updater.EnableDialogue();
+        updater.UpdateBarkDialogue();
+        timeLeft = advanceTime;
+        barkActive = true;
     }
 }

@@ -16,9 +16,9 @@ public class DialogueSceneController : MonoBehaviour
     {
         if (GameManager.Instance.State == GameState.DialogueScene)
         {
-            if (Input.anyKeyDown && !(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
-                _updater.UpdateDialogue();
+                _updater.UpdateSceneDialogue();
             }
         }
     }
