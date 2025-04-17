@@ -72,6 +72,13 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 0; //Temp pause soltion for now (setup secondary time scale later)
 
                 break;
+            case GameState.DialogueScene:
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+
+                Time.timeScale = 0; //Temp pause soltion for now (setup secondary time scale later)
+
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
@@ -85,5 +92,6 @@ public enum GameState
     MainMenu,
     PlayLevel,
     Pause,
-    EndShift
+    EndShift,
+    DialogueScene
 }

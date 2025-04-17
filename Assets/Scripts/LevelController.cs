@@ -16,6 +16,13 @@ public class LevelController : MonoBehaviour
     [SerializeField] TMP_Text damageTxtEnd;
     [SerializeField] TMP_Text tipsTxtEnd;
 
+    [Header("Lazy Hookups")]
+    [SerializeField] DialogueUpdater dialogueUpdater;
+    [SerializeField] DialogueSceneController dialogueSceneController;
+    [SerializeField] DialogueBarkController barkController;
+    [SerializeField] string startSceneDialogue;
+    [SerializeField] string endSceneDialogue;
+
     /* Private Variables */
     private float totalDamage;
     private float totalTips;
@@ -24,6 +31,8 @@ public class LevelController : MonoBehaviour
     private bool timerActive = false;
 
     private Character player;
+
+    private GameState pauseReturn = GameState.PlayLevel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,13 +44,11 @@ public class LevelController : MonoBehaviour
 
         totalDamage = 0;
         totalTips = 0;
-
         timeLeft = levelTime;
-        timerActive = true;
 
-        GameManager.Instance.UpdateGameState(GameState.PlayLevel);
-        AudioManager.Instance.StopMenuBGM();
-        AudioManager.Instance.StartLevelBGM();
+        //GameManager.Instance.UpdateGameState(GameState.DialogueScene);
+        StartDialogueScene(startSceneDialogue);
+        //StartShift();
     }
 
     // Update is called once per frame
@@ -60,7 +67,7 @@ public class LevelController : MonoBehaviour
                 timerActive = false;
 
                 Debug.Log("End of Shift");
-                EndShift();
+                StartDialogueScene(endSceneDialogue); ;
             }
         }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
@@ -93,6 +100,16 @@ public class LevelController : MonoBehaviour
         tipsTxt.text = string.Format("{0:C}",  totalTips);
     }
 
+    private void StartShift()
+    {
+        timerActive = true;
+
+        AudioManager.Instance.StopMenuBGM();
+        AudioManager.Instance.StartLevelBGM();
+
+        GameManager.Instance.UpdateGameState(GameState.PlayLevel);
+    }
+
     private void EndShift()
     {
         GameManager.Instance.UpdateGameState(GameState.EndShift);
@@ -110,6 +127,8 @@ public class LevelController : MonoBehaviour
 
     public void PauseGame()
     {
+        pauseReturn = GameManager.Instance.State;
+
         GameManager.Instance.UpdateGameState(GameState.Pause);
         pauseMenu.gameObject.SetActive(true);
 
@@ -120,7 +139,7 @@ public class LevelController : MonoBehaviour
 
     public void ResumeGame()
     {
-        GameManager.Instance.UpdateGameState(GameState.PlayLevel);
+        GameManager.Instance.UpdateGameState(pauseReturn);
         pauseMenu.gameObject.SetActive(false);
 
         player.enabled = true;
@@ -141,5 +160,25 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Exit Game");
         Application.Quit();
+    }
+
+    public void StartDialogueScene(string _scene)
+    {
+        GameManager.Instance.UpdateGameState(GameState.DialogueScene);
+
+        dialogueUpdater.SelectStoryScene(_scene);
+        dialogueUpdater.EnableDialogue();
+    }
+
+    public void EndDialogueScene()
+    {
+        if(timeLeft > 0)
+        {
+            StartShift();
+        }
+        else
+        {
+            EndShift();
+        }
     }
 }
