@@ -17,7 +17,6 @@ public class DialogueUpdater : MonoBehaviour
     public void EnableDialogue()
     {
         slideIndex = 0;
-        UpdateDialogue();
         dialogueUI.SetActive(true);
     }
 
@@ -26,14 +25,14 @@ public class DialogueUpdater : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
-    public void UpdateDialogue()
+    public void UpdateSceneDialogue()
     {
         if (slideIndex < sceneLength)
         {
-            speakerName.SetText(dialogueArrays.GetSpeakerName(sceneIndex, slideIndex));
-            speakerName.color = dialogueArrays.GetSpeakerColor(sceneIndex, slideIndex);
-            dialogueText.SetText(dialogueArrays.GetDialogueText(sceneIndex, slideIndex));
-            dialogueText.color = dialogueArrays.GetSpeakerColor(sceneIndex, slideIndex);
+            speakerName.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
+            speakerName.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            dialogueText.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
+            dialogueText.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
 
             slideIndex++;
         }
@@ -43,11 +42,38 @@ public class DialogueUpdater : MonoBehaviour
             levelController.EndDialogueScene();
         }
     }
-    
+
+    public void UpdateBarkDialogue()
+    {
+        if (slideIndex < sceneLength)
+        {
+            speakerName.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
+            speakerName.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            dialogueText.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
+            dialogueText.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+
+            // slideIndex++;
+        }
+        else
+        {
+            DisableDialogue();
+        }
+    }
+
     public void SelectStoryScene(string _sceneName)
     {
         sceneIndex = dialogueArrays.FindStorySceneIndex(_sceneName);
         sceneLength = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides.Count;
-        Debug.Log("Scene Length: " + sceneLength.ToString());
+
+        UpdateSceneDialogue();
+        // Debug.Log("Scene Length: " + sceneLength.ToString());
+    }
+
+    public void SelectBark()
+    {
+        sceneIndex = dialogueArrays.PickOrderBark();
+        sceneLength = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides.Count;
+
+        UpdateBarkDialogue();
     }
 }

@@ -7,22 +7,7 @@ public class DialogueArrays : MonoBehaviour
     [SerializeField] public DialoguesList storyDialoguesList;
 
     /* Bark Arrays */
-    //TBD
-
-    public string GetSpeakerName(int _set, int _slide)
-    {
-        return storyDialoguesList.dialogueSets[_set].dialogueSlides[_slide].SpeakerName();
-    }
-
-    public Color GetSpeakerColor(int _set, int _slide)
-    {
-        return storyDialoguesList.dialogueSets[_set].dialogueSlides[_slide].SpeakerColor();
-    }
-
-    public string GetDialogueText(int _set, int _slide)
-    {
-        return storyDialoguesList.dialogueSets[_set].dialogueSlides[_slide].DialogueText();
-    }
+    [SerializeField] public DialoguesList orderBarksList;
 
     public int FindStorySceneIndex(string _sceneName)
     {
@@ -34,6 +19,11 @@ public class DialogueArrays : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    public int PickOrderBark()
+    {
+        return Random.Range(0, orderBarksList.dialogueSets.Count);
     }
 
     /* Dialogue List Classes */

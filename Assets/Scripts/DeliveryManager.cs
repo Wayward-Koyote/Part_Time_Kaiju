@@ -5,6 +5,7 @@ public class DeliveryManager : MonoBehaviour
 {
     [Header("Level Hookup")]
     [SerializeField] OrderInventory orderInventory;
+    [SerializeField] DialogueBarkController barkController;
 
     [Header("Order Variables")]
     [SerializeField] int maxOrders = 5;
@@ -77,7 +78,9 @@ public class DeliveryManager : MonoBehaviour
             {
                 // Debug.Log("Order Up");
 
-                orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], false);                
+                orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], false);
+
+                barkController.OrderBark();
 
                 activeOrders++;
                 counter = maxOrders;
