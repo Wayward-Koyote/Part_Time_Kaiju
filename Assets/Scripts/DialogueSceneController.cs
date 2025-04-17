@@ -3,7 +3,7 @@ using TMPro;
 
 public class DialogueSceneController : MonoBehaviour
 {
-
+    [SerializeField] DialogueUpdater _updater;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,12 +16,10 @@ public class DialogueSceneController : MonoBehaviour
     {
         if (GameManager.Instance.State == GameState.DialogueScene)
         {
-
+            if (Input.anyKeyDown && !(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
+            {
+                _updater.UpdateDialogue();
+            }
         }
-    }
-
-    public void StartScene()
-    {
-
     }
 }

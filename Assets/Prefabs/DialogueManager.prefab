@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4039871765869529894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3442395205448308649}
+  - component: {fileID: 6440778378964442238}
+  - component: {fileID: 1924245865726602187}
+  - component: {fileID: 4603009382070883787}
+  - component: {fileID: 1474907127382554305}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3442395205448308649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039871765869529894}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 996.81836, y: 652.29785, z: -859.24756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6440778378964442238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039871765869529894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca7891aefef6fd4f8d77e3fcc505810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1924245865726602187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039871765869529894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc8e83ad393268478c2a7afadf84c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _updater: {fileID: 4603009382070883787}
+--- !u!114 &4603009382070883787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039871765869529894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adcd67bed2c32b4e9567bffc80a8248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelController: {fileID: 0}
+  dialogueArrays: {fileID: 1474907127382554305}
+  dialogueUI: {fileID: 0}
+  dialogueText: {fileID: 0}
+  speakerName: {fileID: 0}
+--- !u!114 &1474907127382554305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039871765869529894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981f87d7de8d19644adc314e3d75156c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyDialoguesList:
+    dialogueSets:
+    - dialogueSceneName: TestScene1
+      dialogueSlides:
+      - speakerName: Rochelle
+        speakerColor: {r: 0.039215688, g: 0.4509804, b: 0.25490198, a: 1}
+        dialogueText: Test Text 1
+      - speakerName: Chef Jeff
+        speakerColor: {r: 0.84313726, g: 0.48630038, b: 0.019607844, a: 1}
+        dialogueText: Test Text 2
+      - speakerName: Rochelle
+        speakerColor: {r: 0.039215688, g: 0.4509804, b: 0.25490198, a: 1}
+        dialogueText: Test Text 3

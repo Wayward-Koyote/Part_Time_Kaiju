@@ -6191,6 +6191,142 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5619208821874441190, guid: 7c4c8ee839e225e48b69f4c09c56cf4f, type: 3}
   m_PrefabInstance: {fileID: 320627389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &331305303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331305304}
+  - component: {fileID: 331305306}
+  - component: {fileID: 331305305}
+  m_Layer: 5
+  m_Name: DialogueText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &331305304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331305303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 426647307}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 150, y: -75}
+  m_SizeDelta: {x: -300, y: -100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &331305305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331305303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Default Dialogue
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4282468685
+  m_fontColor: {r: 0.3018868, g: 0.28622288, b: 0.25489497, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 42
+  m_fontSizeBase: 42
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &331305306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331305303}
+  m_CullTransparentMesh: 1
 --- !u!1001 &335726354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7686,7 +7822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &426647307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7700,13 +7836,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1263486598}
+  - {fileID: 571081980}
+  - {fileID: 331305304}
   m_Father: {fileID: 1596169519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 50, y: 50}
+  m_SizeDelta: {x: -100, y: -850}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &427910180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10184,6 +10322,142 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 075d479c37e8ff44a97f7a3d48c7015c, type: 3}
+--- !u!1 &571081979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571081980}
+  - component: {fileID: 571081982}
+  - component: {fileID: 571081981}
+  m_Layer: 5
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &571081980
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571081979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 426647307}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 45, y: -15}
+  m_SizeDelta: {x: -90, y: 50}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &571081981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571081979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Speaker Name:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278228921
+  m_fontColor: {r: 0.7264151, g: 0.5923175, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 46
+  m_fontSizeBase: 46
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 5
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &571081982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571081979}
+  m_CullTransparentMesh: 1
 --- !u!1001 &577615101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13261,6 +13535,7 @@ Transform:
   - {fileID: 657708303}
   - {fileID: 1606299359}
   - {fileID: 150056066}
+  - {fileID: 769053958}
   - {fileID: 1596169519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13326,77 +13601,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5619208821874441190, guid: 3bd8c20ccdca8e446902a09b557d27ac, type: 3}
   m_PrefabInstance: {fileID: 760854381}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &769053954
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 769053958}
-  - component: {fileID: 769053957}
-  - component: {fileID: 769053956}
-  - component: {fileID: 769053955}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &769053955
+--- !u!114 &769053955 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4603009382070883787, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+  m_PrefabInstance: {fileID: 6978679103463957750}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769053954}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5adcd67bed2c32b4e9567bffc80a8248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempPanel: {fileID: 1263486597}
---- !u!114 &769053956
+--- !u!114 &769053956 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1924245865726602187, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+  m_PrefabInstance: {fileID: 6978679103463957750}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769053954}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecc8e83ad393268478c2a7afadf84c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &769053957
+--- !u!114 &769053957 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6440778378964442238, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+  m_PrefabInstance: {fileID: 6978679103463957750}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769053954}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cca7891aefef6fd4f8d77e3fcc505810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &769053958
+--- !u!4 &769053958 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+  m_PrefabInstance: {fileID: 6978679103463957750}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769053954}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 996.81836, y: 652.29785, z: -859.24756}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &769409037
 GameObject:
   m_ObjectHideFlags: 0
@@ -20949,7 +21191,7 @@ GameObject:
   - component: {fileID: 1263486600}
   - component: {fileID: 1263486599}
   m_Layer: 5
-  m_Name: Dialogue_TempPanel
+  m_Name: DialoguePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20973,7 +21215,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1263486599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20987,7 +21229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.09421409, b: 0.990566, a: 1}
+  m_Color: {r: 0.9019608, g: 0.9019608, b: 0.8627451, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27288,9 +27530,9 @@ RectTransform:
   - {fileID: 1769629664}
   - {fileID: 133518682}
   - {fileID: 1597922665}
+  - {fileID: 426647307}
   - {fileID: 1449198813}
   - {fileID: 1393365020}
-  - {fileID: 426647307}
   m_Father: {fileID: 760699682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -37478,6 +37720,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1625992790}
     - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: levelTime
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1449198812}
@@ -37490,9 +37736,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558245754}
     - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: barkController
+      value: 
+      objectReference: {fileID: 769053957}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
       propertyPath: shiftEndScreen
       value: 
       objectReference: {fileID: 1393365019}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: dialogueUpdater
+      value: 
+      objectReference: {fileID: 769053955}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: endSceneDialogue
+      value: TestScene2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: startSceneDialogue
+      value: TestScene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949847420083630702, guid: a5e8cb0d4d7d1474c927d4f0487d997d, type: 3}
+      propertyPath: dialogueSceneController
+      value: 
+      objectReference: {fileID: 769053956}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37861,6 +38127,1265 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6071351553401305222, guid: b7325ed9aeb97aa4cb8515d8d546da4d, type: 3}
   m_PrefabInstance: {fileID: 6216166229220734119}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6978679103463957750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 760699682}
+    m_Modifications:
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSceneName
+      value: TestScene2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSceneName
+      value: TestScene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.size
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[0].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[1].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[2].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[0].dialogueText
+      value: Grats on completing the shift new guy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[1].dialogueText
+      value: We delivered soo many more orders today than we used to!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[2].dialogueText
+      value: Jeff, we used to deliver zero orders. On account of not <i>having</i>
+        a delivery boy before...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].dialogueText
+      value: But now we do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].dialogueText
+      value: Haha. For this demo at least.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].dialogueText
+      value: This is normally were you would go home and get to pick your next shift...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].dialogueText
+      value: But that isn't in the game yet, so after you get your shift scores we'll
+        just send you back to the Main Menu for now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].dialogueText
+      value: Wait. Does that mean they're quitting after only one shift.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].dialogueText
+      value: Not exactly, but it does mean that saving isn't ready yet. So we won't
+        really remember this next time they play.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].dialogueText
+      value: Oh. I think I understand.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].dialogueText
+      value: Hey there! Welcome to Part Time Kaiju!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].dialogueText
+      value: This is the Test Level where you can check out all of the game's mechanics.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].speakerName
+      value: Rochelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].speakerName
+      value: Chef Jeff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].dialogueText
+      value: Rochelle, who are you talking to?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].dialogueText
+      value: And why does the city look so weird?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].dialogueText
+      value: This is just a test level with proxy models Jeff. The game doesn't have
+        any art assets yet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].dialogueText
+      value: Game? Level? Models? Is this one of your young person computer things?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].dialogueText
+      value: And you still haven't said who yer talking to either.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].dialogueText
+      value: I'm talking to the Player... Ya know, the new hire...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].dialogueText
+      value: Oh! Is Player some new street slang for part timers? That's neat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].dialogueText
+      value: Uh... sure boss.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].dialogueText
+      value: Well I hope you had fun <i>Player</i>. And we hope you play again soon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].dialogueText
+      value: Hey boss! You actually got that right this time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].dialogueText
+      value: Sure thing Jeff!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].dialogueText
+      value: 'Well you heard him new guy. In this game, you''re the new Part-Time
+        Delivery Boy for our pizza joint: Big Slice Pizza.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].dialogueText
+      value: When orders are placed, your job will be to pick them up from the shop
+        and then get them to delivery location as fast as you can.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].dialogueText
+      value: Tell them that they need to deliver the order in 30 seconds or it's
+        free.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].dialogueText
+      value: You need to deliver the order in 30 seconds or it's free.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].dialogueText
+      value: If you take too long to deliver an order it will expire and that means
+        no tip either. That's our store policy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].dialogueText
+      value: But with your size you shouldn't have to worry about traffic. Plus you'll
+        get a better tip the faster you complete each delivery!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].dialogueText
+      value: And if you need to make up time you can always... you know... "<i>cut
+        some corners</i>"! *wink* *wink*
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].dialogueText
+      value: Just be careful about causing too much property damage. We won't fire
+        you or anything, but the city <i>will</i> bill you for the damages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].dialogueText
+      value: And that's pretty much all you need to know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].dialogueText
+      value: Orders will be placed automatically, so just go with it and you'll figure
+        it out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].dialogueText
+      value: Good luck on your shift new guy. I mean <i>Player</i>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].dialogueText
+      value: Well, I don't care how the city looks as long as people are still placing
+        orders.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].dialogueText
+      value: I'll let you show that new "<i>Player</i>" the ropes while I get the
+        place ready to open then.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].dialogueText
+      value: Sure thing Jeff!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].dialogueText
+      value: 'Well you heard him new guy. In this game, you''re the new Part-Time
+        Delivery Boy for our pizza joint: Big Slice Pizza.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].dialogueText
+      value: When orders are placed, your job will be to pick them up from the shop
+        and then get them to the delivery location as fast as you can.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].dialogueText
+      value: Tell them that they need to deliver the order in 30 seconds or it's
+        free.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].dialogueText
+      value: You need to deliver the order in 30 seconds or it's free.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].dialogueText
+      value: If you take too long to deliver an order it will expire and that means
+        no tip either. That's our store policy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].dialogueText
+      value: But with your size you shouldn't have to worry about traffic. Plus you'll
+        get a better tip the faster you complete each delivery!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].dialogueText
+      value: And if you need to make up time you can always... you know... "<i>cut
+        some corners</i>"! *wink* *wink*
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].dialogueText
+      value: Just be careful about causing too much property damage. We won't fire
+        you or anything, but the city <i>will</i> bill you for the damages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].dialogueText
+      value: And that's pretty much all you need to know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].dialogueText
+      value: Orders will be placed automatically, so just just follow the arrows
+        you'll figure it out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].dialogueText
+      value: Good luck on your shift new guy. I mean <i>Player</i>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[0].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[0].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[0].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[1].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[1].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[1].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[2].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[2].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[2].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[3].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[4].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[5].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[6].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[7].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[8].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[9].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[0].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[1].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[2].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[3].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[4].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[5].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[6].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[7].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[8].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[9].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[10].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].speakerColor.b
+      value: 0.27130446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].speakerColor.g
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[11].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[12].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[13].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[14].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[15].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[16].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[17].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[18].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[19].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[20].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[21].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[22].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[0].dialogueSlides.Array.data[23].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[10].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[11].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[12].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[13].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[14].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[15].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[16].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[17].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[18].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[19].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[20].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[21].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].speakerColor.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].speakerColor.g
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[22].speakerColor.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].speakerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].speakerColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].speakerColor.g
+      value: 0.48630038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474907127382554305, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: storyDialoguesList.dialogueSets.Array.data[1].dialogueSlides.Array.data[23].speakerColor.r
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 996.81836
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 652.29785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -859.24756
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442395205448308649, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039871765869529894, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603009382070883787, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 426647306}
+    - target: {fileID: 4603009382070883787, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: speakerName
+      value: 
+      objectReference: {fileID: 571081981}
+    - target: {fileID: 4603009382070883787, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 331305305}
+    - target: {fileID: 4603009382070883787, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 150056065}
+    - target: {fileID: 6440778378964442238, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
+      propertyPath: _updater
+      value: 
+      objectReference: {fileID: 769053955}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 663f977d69fe1aa44a94a634ef1c1cfa, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -37870,4 +39395,3 @@ SceneRoots:
   - {fileID: 1066620733}
   - {fileID: 1723732279}
   - {fileID: 1243435585}
-  - {fileID: 769053958}
