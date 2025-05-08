@@ -6,33 +6,44 @@ public class DialogueUpdater : MonoBehaviour
     [SerializeField] LevelController levelController;
     [SerializeField] DialogueArrays dialogueArrays;
     
-    [SerializeField] GameObject dialogueUI;
-    [SerializeField] TMP_Text dialogueText;
-    [SerializeField] TMP_Text speakerName;
+    [SerializeField] GameObject sceneDialogueUI;
+    [SerializeField] TMP_Text sceneDialogueText;
+    [SerializeField] TMP_Text sceneSpeakerName;
+
+    [SerializeField] GameObject barkDialogueUI;
+    [SerializeField] TMP_Text barkDialogueText;
+    [SerializeField] TMP_Text barkSpeakerName;
 
     private int sceneIndex = 0;
     private int sceneLength = 0;
     private int slideIndex = 0;
 
-    public void EnableDialogue()
+    public void EnableSceneDialogue()
     {
         slideIndex = 0;
-        dialogueUI.SetActive(true);
+        sceneDialogueUI.SetActive(true);
+    }
+    public void EnableBarkDialogue()
+    {
+        slideIndex = 0;
+        barkDialogueUI.SetActive(true);
     }
 
+    // Disable all dialogue panels
     public void DisableDialogue()
     {
-        dialogueUI.SetActive(false);
+        sceneDialogueUI.SetActive(false);
+        barkDialogueUI.SetActive(false);
     }
 
     public void UpdateSceneDialogue()
     {
         if (slideIndex < sceneLength)
         {
-            speakerName.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
-            speakerName.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
-            dialogueText.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
-            dialogueText.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            sceneSpeakerName.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
+            sceneSpeakerName.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            sceneDialogueText.SetText(dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
+            sceneDialogueText.color = dialogueArrays.storyDialoguesList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
 
             slideIndex++;
         }
@@ -47,10 +58,10 @@ public class DialogueUpdater : MonoBehaviour
     {
         if (slideIndex < sceneLength)
         {
-            speakerName.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
-            speakerName.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
-            dialogueText.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
-            dialogueText.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            barkSpeakerName.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerName());
+            barkSpeakerName.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
+            barkDialogueText.SetText(dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].DialogueText());
+            barkDialogueText.color = dialogueArrays.orderBarksList.dialogueSets[sceneIndex].dialogueSlides[slideIndex].SpeakerColor();
 
             // slideIndex++;
         }

@@ -1,11 +1,14 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using System.Collections.Generic;
 
 public class LevelController : MonoBehaviour
 {
     [Header("Level Variables")]
     [SerializeField] float levelTime = 300f;
+    [SerializeField] List<Overtime> overtimeList;
 
     [Header("UI Hookup")]
     [SerializeField] TMP_Text timerTxt;
@@ -22,13 +25,18 @@ public class LevelController : MonoBehaviour
     [SerializeField] DialogueBarkController barkController;
     [SerializeField] string startSceneDialogue;
     [SerializeField] string endSceneDialogue;
+    [SerializeField] Animator anim;
 
     /* Private Variables */
     private float totalDamage;
     private float totalTips;
+    private float totalDeliveries;
 
     private float timeLeft;
     private bool timerActive = false;
+
+    private int overtime = 0;
+    private float payMult = 1f;
 
     private Character player;
 
@@ -44,11 +52,15 @@ public class LevelController : MonoBehaviour
 
         totalDamage = 0;
         totalTips = 0;
+        totalDeliveries = 0;
+
         timeLeft = levelTime;
 
-        //GameManager.Instance.UpdateGameState(GameState.DialogueScene);
+        overtime = 0;
+        payMult = 1.0f;
+
         StartDialogueScene(startSceneDialogue);
-        //StartShift();
+        //StartShift(); *depricated*
     }
 
     // Update is called once per frame
@@ -63,11 +75,7 @@ public class LevelController : MonoBehaviour
             }
             else
             {
-                timeLeft = 0;
-                timerActive = false;
-
-                Debug.Log("End of Shift");
-                StartDialogueScene(endSceneDialogue); ;
+                OvertimeCheck();
             }
         }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
@@ -87,6 +95,37 @@ public class LevelController : MonoBehaviour
         timerTxt.text = string.Format("{0:0}:{1:00}", minutes, seconds);
     }
 
+    private void OvertimeCheck()
+    {
+        if (overtime < overtimeList.Count)
+        {
+            if (totalDeliveries >= overtimeList[overtime].OvertimePar())
+            {
+                timeLeft += overtimeList[overtime].TimeExtention();
+                payMult = overtimeList[overtime].PayMult();
+                overtime++;
+
+                Debug.Log("Overtime " + overtime.ToString());
+            }
+            else
+            {
+                timeLeft = 0;
+                timerActive = false;
+
+                Debug.Log("End of Shift");
+                StartDialogueScene(endSceneDialogue);
+            }
+        }
+        else
+        {
+            timeLeft = 0;
+            timerActive = false;
+
+            Debug.Log("End of Shift");
+            StartDialogueScene(endSceneDialogue);
+        }
+    }
+
     public void UpdateDamage(float damage)
     {
         totalDamage += damage;
@@ -96,8 +135,10 @@ public class LevelController : MonoBehaviour
 
     public void UpdateTips(float tip)
     {
-        totalTips += tip;
+        totalTips += tip * payMult;
         tipsTxt.text = string.Format("{0:C}",  totalTips);
+
+        totalDeliveries++;
     }
 
     private void StartShift()
@@ -120,9 +161,6 @@ public class LevelController : MonoBehaviour
         shiftEndScreen.SetActive(true);
 
         player.enabled = false;
-
-        AudioManager.Instance.StopLevelBGM();
-        AudioManager.Instance.StartMenuBGM();
     }
 
     public void PauseGame()
@@ -167,7 +205,11 @@ public class LevelController : MonoBehaviour
         GameManager.Instance.UpdateGameState(GameState.DialogueScene);
 
         dialogueUpdater.SelectStoryScene(_scene);
-        dialogueUpdater.EnableDialogue();
+        dialogueUpdater.DisableDialogue();
+        dialogueUpdater.EnableSceneDialogue();
+
+        AudioManager.Instance.StopLevelBGM();
+        AudioManager.Instance.StartMenuBGM();
     }
 
     public void EndDialogueScene()
@@ -179,6 +221,28 @@ public class LevelController : MonoBehaviour
         else
         {
             EndShift();
+        }
+    }
+
+    /* Overtime Serializable Class */
+    [System.Serializable]
+    public class Overtime
+    {
+        [SerializeField] int overtimePar = 20;
+        [SerializeField] float timeExtension = 30f;
+        [SerializeField] float payMult = 1.5f;
+
+        public int OvertimePar()
+        {
+            return overtimePar;
+        }
+        public float TimeExtention()
+        {
+            return timeExtension;
+        }
+        public float PayMult()
+        {
+            return payMult;
         }
     }
 }
