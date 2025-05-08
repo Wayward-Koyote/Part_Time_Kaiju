@@ -14,6 +14,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] TMP_Text timerTxt;
     [SerializeField] TMP_Text damageTxt;
     [SerializeField] TMP_Text tipsTxt;
+    [SerializeField] TMP_Text parTxt;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject shiftEndScreen;
     [SerializeField] TMP_Text damageTxtEnd;
@@ -26,6 +27,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] string startSceneDialogue;
     [SerializeField] string endSceneDialogue;
     [SerializeField] Animator anim;
+    [SerializeField] GameObject ShiftEndTempFix; //temp fix for animation bug
 
     /* Private Variables */
     private float totalDamage;
@@ -35,6 +37,7 @@ public class LevelController : MonoBehaviour
     private float timeLeft;
     private bool timerActive = false;
 
+    private int currentPar = 0;
     private int overtime = 0;
     private float payMult = 1f;
 
@@ -58,6 +61,9 @@ public class LevelController : MonoBehaviour
 
         overtime = 0;
         payMult = 1.0f;
+
+        currentPar += overtimeList[overtime].OvertimePar();
+        UpdatePar();
 
         StartDialogueScene(startSceneDialogue);
         //StartShift(); *depricated*
@@ -99,11 +105,17 @@ public class LevelController : MonoBehaviour
     {
         if (overtime < overtimeList.Count)
         {
-            if (totalDeliveries >= overtimeList[overtime].OvertimePar())
+            if (totalDeliveries >= currentPar)
             {
                 timeLeft += overtimeList[overtime].TimeExtention();
                 payMult = overtimeList[overtime].PayMult();
                 overtime++;
+
+                currentPar += overtimeList[overtime].OvertimePar();
+
+                UpdatePar();
+
+                anim.Play("Overtime" + overtime.ToString());
 
                 Debug.Log("Overtime " + overtime.ToString());
             }
@@ -111,6 +123,9 @@ public class LevelController : MonoBehaviour
             {
                 timeLeft = 0;
                 timerActive = false;
+
+                // anim.Play("ShiftEnd");       Animation bug with Time.DeltaTime
+                ShiftEndTempFix.SetActive(true); //temp fix for animation bug
 
                 Debug.Log("End of Shift");
                 StartDialogueScene(endSceneDialogue);
@@ -120,6 +135,9 @@ public class LevelController : MonoBehaviour
         {
             timeLeft = 0;
             timerActive = false;
+
+            // anim.Play("ShiftEnd");       Aniomation bug with Time.DeltaTime
+            ShiftEndTempFix.SetActive(true); //temp fix for animation bug
 
             Debug.Log("End of Shift");
             StartDialogueScene(endSceneDialogue);
@@ -139,6 +157,12 @@ public class LevelController : MonoBehaviour
         tipsTxt.text = string.Format("{0:C}",  totalTips);
 
         totalDeliveries++;
+        UpdatePar();
+    }
+
+    private void UpdatePar()
+    {
+        parTxt.text = (totalDeliveries.ToString() + "/" + currentPar.ToString());
     }
 
     private void StartShift()
@@ -147,6 +171,8 @@ public class LevelController : MonoBehaviour
 
         AudioManager.Instance.StopMenuBGM();
         AudioManager.Instance.StartLevelBGM();
+
+        anim.Play("ShiftStart");
 
         GameManager.Instance.UpdateGameState(GameState.PlayLevel);
     }
