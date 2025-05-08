@@ -28,8 +28,9 @@ public class DialogueBarkController : MonoBehaviour
     
     public void OrderBark()
     {
+        updater.DisableDialogue();
         updater.SelectBark();
-        updater.EnableDialogue();
+        updater.EnableBarkDialogue();
         updater.UpdateBarkDialogue();
         timeLeft = advanceTime;
         barkActive = true;

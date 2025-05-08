@@ -49,6 +49,7 @@ public class Character : MonoBehaviour
     Vector3 currentVelocity;
     bool grounded;
     Vector3 gravityVelocity;
+    Transform resetPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,6 +81,8 @@ public class Character : MonoBehaviour
         grounded = controller.isGrounded;
         tripChance = 0f - tripStartingBuffer;
         trip = false;
+
+        resetPos = transform;
     }
 
     // Update is called once per frame
@@ -165,5 +168,18 @@ public class Character : MonoBehaviour
     public void SetCurrentVelocity(Vector3 _velocity)
     {
         currentVelocity = _velocity;
+    }
+
+    private void HandleDebugInput()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ResetPosition();
+        }
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = resetPos.position;
     }
 }
