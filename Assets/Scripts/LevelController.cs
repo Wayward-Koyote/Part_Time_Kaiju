@@ -3,18 +3,26 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LevelController : MonoBehaviour
 {
     [Header("Level Variables")]
     [SerializeField] float levelTime = 300f;
     [SerializeField] List<Overtime> overtimeList;
+    [SerializeField] float parDamagePenaltyMod = 0.0001f;
 
     [Header("UI Hookup")]
     [SerializeField] TMP_Text timerTxt;
-    [SerializeField] TMP_Text damageTxt;
-    [SerializeField] TMP_Text tipsTxt;
-    [SerializeField] TMP_Text parTxt;
+    [SerializeField] Image clockRadialBar;
+    [SerializeField] Color timerStart;
+    [SerializeField] Color timerEnd;
+    [SerializeField] Image overtimeMeter;
+    [SerializeField] Image overtimeMeterBG;
+    //Deprecated   [SerializeField] TMP_Text damageTxt;
+    //Deprecated   [SerializeField] TMP_Text tipsTxt;
+    //Deprecated   [SerializeField] TMP_Text parTxt;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject shiftEndScreen;
     [SerializeField] TMP_Text damageTxtEnd;
@@ -32,13 +40,16 @@ public class LevelController : MonoBehaviour
     /* Private Variables */
     private float totalDamage;
     private float totalTips;
-    private float totalDeliveries;
+    private float totalDeliveries;  //Unused, keeping for eventual stats
 
     private float timeLeft;
     private bool timerActive = false;
+    private float timerBarOffset;
 
-    private int currentPar = 0;
-    private int overtime = 0;
+    private float parScore = 0f;
+    private int bankedOvertime = 0;
+    private float currentPar = 0;
+    private int currentOvertime = 0;
     private float payMult = 1f;
 
     private Character player;
@@ -58,12 +69,18 @@ public class LevelController : MonoBehaviour
         totalDeliveries = 0;
 
         timeLeft = levelTime;
+        timerBarOffset = 1 / levelTime;
 
-        overtime = 0;
+        bankedOvertime = 0;
+        currentOvertime = 0;
         payMult = 1.0f;
 
-        currentPar += overtimeList[overtime].OvertimePar();
-        UpdatePar();
+        parScore = 0f;
+        currentPar = overtimeList[currentOvertime].OvertimePar();
+        overtimeMeter.fillAmount = 0f;
+        overtimeMeter.color = overtimeList[currentOvertime].OvertimeBarColor();
+
+        //UpdatePar(); *deprecated*
 
         StartDialogueScene(startSceneDialogue);
         //StartShift(); *depricated*
@@ -99,25 +116,32 @@ public class LevelController : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         timerTxt.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+        float timerPercent = currentTime * timerBarOffset;
+        // Debug.Log("Clock Percent: " + timerPercent.ToString());
+        clockRadialBar.fillAmount = timerPercent;
+        clockRadialBar.color = Color.Lerp(timerEnd, timerStart, timerPercent);
     }
 
     private void OvertimeCheck()
     {
-        if (overtime < overtimeList.Count)
+        if (currentOvertime < overtimeList.Count)
         {
-            if (totalDeliveries >= currentPar)
+            if (bankedOvertime > currentOvertime)
             {
-                timeLeft += overtimeList[overtime].TimeExtention();
-                payMult = overtimeList[overtime].PayMult();
-                overtime++;
+                timeLeft += overtimeList[currentOvertime].TimeExtention();
+                timerBarOffset = 1 / timeLeft;
 
-                currentPar += overtimeList[overtime].OvertimePar();
+                payMult = overtimeList[currentOvertime].PayMult();
+                currentOvertime++;
 
-                UpdatePar();
+                // currentPar += overtimeList[currentOvertime].OvertimePar(); *deprecated*
 
-                anim.Play("Overtime" + overtime.ToString());
+                // UpdatePar(); *deprecated*
 
-                Debug.Log("Overtime " + overtime.ToString());
+                anim.Play("Overtime" + currentOvertime.ToString());
+
+                Debug.Log("Overtime " + currentOvertime.ToString());
             }
             else
             {
@@ -125,7 +149,7 @@ public class LevelController : MonoBehaviour
                 timerActive = false;
 
                 // anim.Play("ShiftEnd");       Animation bug with Time.DeltaTime
-                ShiftEndTempFix.SetActive(true); //temp fix for animation bug
+                ShiftEndTempFix.SetActive(true); //temp fix for animation bug, need to setup token Times
 
                 Debug.Log("End of Shift");
                 StartDialogueScene(endSceneDialogue);
@@ -148,21 +172,48 @@ public class LevelController : MonoBehaviour
     {
         totalDamage += damage;
         //Debug.Log("Total Damage: $" + totalDamage);
-        damageTxt.text = string.Format("{0:C}", totalDamage);
+        //Deprecated   damageTxt.text = string.Format("{0:C}", totalDamage);
+
+        UpdateOvertimeMeter(damage * -parDamagePenaltyMod);
     }
 
     public void UpdateTips(float tip)
     {
         totalTips += tip * payMult;
-        tipsTxt.text = string.Format("{0:C}",  totalTips);
+        // Deprecated   tipsTxt.text = string.Format("{0:C}",  totalTips);
 
         totalDeliveries++;
-        UpdatePar();
+
+        UpdateOvertimeMeter(tip);
     }
 
-    private void UpdatePar()
+    private void UpdateOvertimeMeter(float update)
     {
-        parTxt.text = (totalDeliveries.ToString() + "/" + currentPar.ToString());
+        parScore += update;
+        // Debug.Log("Par Score: " + parScore.ToString());
+
+        if (bankedOvertime < overtimeList.Count)
+        {
+            if (parScore < currentPar)
+            {
+                overtimeMeter.fillAmount = Mathf.Clamp((parScore / currentPar), 0, 1);
+                // Debug.Log("Overtime Meter: " +  overtimeMeter.fillAmount.ToString());
+            }
+            else
+            {
+                parScore -= currentPar;
+
+                bankedOvertime++;
+                currentPar = overtimeList[bankedOvertime].OvertimePar();
+
+                overtimeMeterBG.color = overtimeMeter.color;
+                overtimeMeter.color = overtimeList[bankedOvertime].OvertimeBarColor();
+
+                overtimeMeter.fillAmount = Mathf.Clamp((parScore / currentPar), 0, 1);
+            }
+        }
+
+        //Deprecated   parTxt.text = (totalDeliveries.ToString() + "/" + currentPar.ToString());
     }
 
     private void StartShift()
@@ -181,8 +232,8 @@ public class LevelController : MonoBehaviour
     {
         GameManager.Instance.UpdateGameState(GameState.EndShift);
 
-        damageTxtEnd.text = damageTxt.text;
-        tipsTxtEnd.text = tipsTxt.text;
+        damageTxtEnd.text = string.Format("{0:C}", totalDamage);
+        tipsTxtEnd.text = string.Format("{0:C}", totalTips);
 
         shiftEndScreen.SetActive(true);
 
@@ -257,6 +308,7 @@ public class LevelController : MonoBehaviour
         [SerializeField] int overtimePar = 20;
         [SerializeField] float timeExtension = 30f;
         [SerializeField] float payMult = 1.5f;
+        [SerializeField] Color overtimeBarColor = Color.blue;
 
         public int OvertimePar()
         {
@@ -269,6 +321,10 @@ public class LevelController : MonoBehaviour
         public float PayMult()
         {
             return payMult;
+        }
+        public Color OvertimeBarColor()
+        {
+            return overtimeBarColor;
         }
     }
 }

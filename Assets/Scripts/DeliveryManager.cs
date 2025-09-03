@@ -80,7 +80,8 @@ public class DeliveryManager : MonoBehaviour
 
                 orderInventory.OrderPlaced(timeToCompleteOrders, baseTips, deliveryNodes[index], false);
 
-                barkController.OrderBark();
+                if (Random.Range(0, 4) > 3)
+                    barkController.OrderBark();
 
                 activeOrders++;
                 counter = maxOrders;
